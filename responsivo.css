@@ -1,0 +1,6 @@
+@media (max-width: 770px) {
+
+    .conteudo {
+        flex-direction: column;
+    }
+}
