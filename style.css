@@ -100,7 +100,7 @@ nav {
 }
 
 .paginaAtiva {
-    max-width: 1010px;
+    width: 70vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,16 +129,19 @@ nav {
 
 /* CONTEUDO */
 .conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
     background: rgb(221, 221, 221);
-    justify-content: center;
-    align-items: start;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 2vh;
-    gap: 20px;
+}
+
+.colunas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
 }
 
 
@@ -162,7 +165,7 @@ margin-bottom: 10px;
 
 .noticiaPrincipal img {
     display: block;
-    max-width: 40vw;
+    width: 40vw;
 }
 
 .noticiaPrincipal .cidadeNoticia {
@@ -187,8 +190,10 @@ margin-bottom: 10px;
 }
 
 .outrasNoticias {
+    width: 40vw;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -229,14 +234,15 @@ margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 14vw;
 }
 
 .colunaArtigos ul {
     display: flex;
     flex-direction: column;
-    width: 14vw;
     gap: 15px;
     margin-top: 3vh;
+    justify-content: center;
 }
 
 .colunaArtigos .categoria {
@@ -342,9 +348,7 @@ margin-bottom: 10px;
   
   .agenda {
     width: 14vw;
-    max-width: 95vw;
     height: auto;
-
   }
   
   .prox-eventos {
