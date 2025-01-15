@@ -4,6 +4,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 90vw;
     }
 
     .colunaNoticias {
@@ -17,15 +18,17 @@
     .outrasNoticias {
         width: 90vw;
         display: flex;
+        flex-wrap: wrap;
         margin: 3vh auto;
+        justify-content: start;
     }
 
     .outrasNoticias li {
         display: flex;
         flex-direction: column;
         width: 20vw;
-        margin: 0 20px;
         align-items: start;
+        margin: 0 18px;
     }
 
     .outrasNoticias h3 {
@@ -54,8 +57,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         width: 90vw;
-        gap: 2vw;
-        margin-top: 3vh;
+        gap: 7vw;
+        margin-top: 0;
     }
 
     .colunaCalendario {
