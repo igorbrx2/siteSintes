@@ -85,4 +85,17 @@
         height: auto;
       }
 
+      .paginaAtiva {
+        justify-content: start;
+        width: 52vw;
+        padding-top: 10vh;
+        padding-right: 0;
+        margin-left: 12vw;
+        margin-right: 0;
+    }
+    
+        .paginaAtiva h1 {
+        margin-left: 22vw;
+    }
+
 }
