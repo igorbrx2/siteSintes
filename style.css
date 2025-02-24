@@ -388,3 +388,25 @@ margin-bottom: 10px;
   .sunday {
     color: rgb(253, 39, 39); /* Vermelho */
 }
+
+/* VIDEOS */
+
+.videosMMS {
+  display: flex;
+  width: 70%;
+}
+
+#videos {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#videos h2 {
+  font-weight: 100;
+  color: rgb(255, 136, 0);
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
