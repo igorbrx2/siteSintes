@@ -190,15 +190,11 @@
         <h2>VÍDEOS</h2>
 
         <div class="videosMMS">
-        <iframe src="/videos" width="100%" height="1000"></iframe>
+        <iframe src="/videos" width="100%" style="border:none;"></iframe>
         </div>
 
         </section>
 
     </main>
 
-    <?php wp_footer(); ?>
-</body>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/script.js"></script>
-
-</html>
+    <?php get_footer(); ?>

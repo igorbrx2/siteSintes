@@ -25,6 +25,10 @@ a {
     color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
 /* HEADER */
 .logo img {
     display: block;
@@ -409,4 +413,57 @@ margin-bottom: 10px;
   color: rgb(255, 136, 0);
   font-size: 1.3rem;
   margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+#rodape {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 48, 48);
+}
+
+#rodape span {
+  color: white;
+}
+
+.mmsInformacoes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.mmsInformacoes img {
+  width: 120px;
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+}
+
+.redes img {
+  width: 30px;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+  transition: ease-in-out .2s;
+}
+
+.divisorRodape {
+  display: block;
+  height: 1px;
+  width: 85%;
+  background: rgb(180, 180, 180);
+  margin-top: 10px ;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desenvolvidoPor {
+  margin-left: 9%;
+  margin-top: 10px;
+  padding-bottom: 50px;
 }

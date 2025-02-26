@@ -87,4 +87,10 @@
         width: 90vw;
       }
 
+    .mmsInformacoes {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
 }
