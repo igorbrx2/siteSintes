@@ -138,6 +138,7 @@ nav {
     width: 100%;
     background: rgb(221, 221, 221);
     margin-top: 2vh;
+    padding-bottom: 30px;
 }
 
 .colunas {
@@ -400,8 +401,11 @@ margin-bottom: 10px;
   width: 70%;
 }
 
+.videosMMS iframe {
+  height: 100vh;
+}
+
 #videos {
-  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -409,10 +413,10 @@ margin-bottom: 10px;
 }
 
 #videos h2 {
+  padding: 30px 0px;
   font-weight: 100;
   color: rgb(255, 136, 0);
   font-size: 1.3rem;
-  margin-bottom: 30px;
 }
 
 /* FOOTER */
