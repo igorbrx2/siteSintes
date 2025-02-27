@@ -236,6 +236,7 @@ margin-bottom: 10px;
 .colunaArtigos img {
     display: block;
     max-width: 200px;
+    height: 15vh;
 }
 
 .colunaArtigos li a {

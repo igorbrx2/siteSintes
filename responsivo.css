@@ -93,4 +93,60 @@
         text-align: center;
     }
 
-}
+        .outrasNoticias {
+            width: 90vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+    
+        .outrasNoticias li {
+            width: calc(50% - 10px);
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .outrasNoticias li a {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; 
+        }
+    
+        .outrasNoticias img {
+            width: 100%; 
+            height: auto; 
+        }
+    
+        .outrasNoticias h3 {
+            text-align: left; 
+        }
+    
+        .outrasNoticias .cidadeNoticia,
+        .outrasNoticias .autorNoticia {
+            text-align: center; /* Centraliza o texto da cidade e do autor */
+        }
+
+        .colunaArtigos ul {
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+            list-style: none;
+            padding-bottom: 30px;
+        }
+
+        .colunaArtigos li a {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 20vw;
+        }
+
+    }
