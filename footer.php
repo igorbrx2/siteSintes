@@ -16,8 +16,12 @@
     <span class="desenvolvidoPor">Desenvolvido pela Poti Comunicação. | +55 84 99973-8682</span>
 </footer>
 
-<?php wp_footer(); ?>
+<!-- script para jquery -->
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/jquery.js"></script>
+<!-- script.js -->
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/script.js"></script>
 
+<?php wp_footer(); ?>
 </body>
 
 </html>
