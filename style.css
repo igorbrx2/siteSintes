@@ -173,16 +173,17 @@ margin-bottom: 10px;
 .noticiaPrincipal img {
     display: block;
     width: 40vw;
+    padding-bottom: 5px;
 }
 
-.noticiaPrincipal .cidadeNoticia {
+.noticiaPrincipal .cidadeNoticia, #corpoPosts .cidadeNoticia {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     color: rgb(253, 39, 39);
 } 
 
-.noticiaPrincipal .autorNoticia {
+.noticiaPrincipal .autorNoticia, #corpoPosts .autorNoticia {
     font-family: Arial, Helvetica, sans-serif;
     font-size: .8rem;
     font-weight: 500;
@@ -471,4 +472,58 @@ margin-bottom: 10px;
   margin-left: 9%;
   margin-top: 10px;
   padding-bottom: 50px;
+}
+
+/* POSTS */
+
+.linksPosts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #faa234;
+  gap: 10px;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+}
+
+.linksPosts li:hover {
+  transform: scale(1.1);
+  transition: ease-in-out .2s;
+}
+
+#corpoPosts {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+#corpoPosts h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  padding-bottom: 3vh;
+}
+
+#corpoPosts .cidadeNoticia {
+  text-align: center;
+  padding-top: 2vh;
+}
+
+#corpoPosts .autorNoticia {
+  text-align: center;
+}
+
+.divisorTitulo {
+  display: block;
+  width: 60vw;
+  height: 2px;
+  background: #a7a7a7;
+}
+
+#corpoPosts p {
+  padding: 5vh 0;
+}
+
+.leiaMais {
+  padding-bottom: 5vh;
 }
