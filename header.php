@@ -26,7 +26,7 @@
             <ul class="nav-list">
                 <li><a href="./">Notícias</a></li>
                 <li><a href="">Documentos</a></li>
-                <li><a href="">Multimídia</a></li>
+                <li><a href="/multimidia">Multimídia</a></li>
                 <li><a href="">Canais e Redes Sociais</a></li>
                 <li><a href="">Política de Privacidade</a></li>
             </ul>
