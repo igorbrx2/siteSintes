@@ -153,4 +153,18 @@ document.querySelector('.next').addEventListener('click', () => {
 
 renderCalendar();
 
-// MULTIMIDIA
+// BOTÃO MMS
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.querySelector(".btnPage");
+    const labels = ["MMS", "CM", "SGA", "UZL"];
+    let index = 0;
+
+    btn.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita que o link recarregue a página
+        index = (index + 1) % labels.length; // Alterna entre os rótulos
+        btn.textContent = labels[index];
+    });
+});
+
+

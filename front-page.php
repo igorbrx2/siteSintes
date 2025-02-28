@@ -15,119 +15,131 @@
 
             <div class="colunas">
             <div class="colunaNoticias">
-                <div class="noticiaPrincipal">
-                    <a href="">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/professorabebida.jpg" alt="">
-                    <span class="cidadeNoticia">São Gonçalo</span>
-                    <h2>Professora só dorme depois de tomar uma dose de cachaça</h2>
-                    <span class="autorNoticia">Por J.Linfonodo</span>
-                    <p>A narrativa ainda traz dilemas existenciais: será que é a cachaça que ajuda a dormir, ou é o sono que ajuda a preciar melhor a cachaça? É uma mistura de filosofia de boteco com determinação de maratonista!</p>
-                    </a>
+            <?php 
+
+// Busca o post mais recente
+$query = new WP_Query(array(
+    'posts_per_page' => 1,
+    'category__not_in' => array(get_cat_ID('Artigo')),
+));
+
+if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); 
+?>
+    <div class="noticiaPrincipal">
+        <a href="<?php the_permalink(); ?>">
+            <?php if (has_post_thumbnail()) : ?>
+                <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title_attribute(); ?>">
+            <?php else : ?>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/placeholder.jpg" alt="Imagem não disponível">
+            <?php endif; ?>
+
+            <span class="cidadeNoticia">
+                <?php 
+                $categories = get_the_category();
+                if (!empty($categories)) {
+                    echo esc_html($categories[0]->name);
+                }
+                ?>
+            </span>
+
+            <h2><?php the_title(); ?></h2>
+            
+            <span class="autorNoticia">Por <?php the_author(); ?></span>
+
+            <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
+        </a>
+    </div>
+<?php 
+endwhile; 
+wp_reset_postdata(); 
+endif;
+?>
+
+<ul class="outrasNoticias">
+    <?php 
+    // Busca os 6 posts mais recentes (excluindo o primeiro, se já mostrado antes)
+    $query = new WP_Query(array(
+        'posts_per_page' => 6,
+        'offset' => 1,
+        'category__not_in' => array(get_cat_ID('Artigo')),
+    ));
+
+    if ($query->have_posts()) : 
+        while ($query->have_posts()) : $query->the_post(); 
+    ?>
+        <li>
+            <a href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()) : ?>
+                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>">
+                <?php else : ?>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/placeholder.jpg" alt="Imagem não disponível">
+                <?php endif; ?>
+
+                <div>
+                    <span class="cidadeNoticia">
+                        <?php 
+                        $categories = get_the_category();
+                        if (!empty($categories)) {
+                            echo esc_html($categories[0]->name);
+                        }
+                        ?>
+                    </span>
+
+                    <h3><?php the_title(); ?></h3>
+                    
+                    <span class="autorNoticia">Por <?php the_author(); ?></span>
                 </div>
-                <ul class="outrasNoticias">
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/telacinza.jpeg" alt="">
-                        <div>
-                            <span class="cidadeNoticia">Natal</span>
-                            <h3>Sem saúde, energia e água: Brasil vive o caos das privatizações</h3>
-                            <span class="autorNoticia">Por Bruxo da Frasqueira</span>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/telacinza.jpeg" alt="">
-                        <div>
-                            <span class="cidadeNoticia">Natal</span>
-                            <h3>Sem saúde, energia e água: Brasil vive o caos das privatizações</h3>
-                            <span class="autorNoticia">Por Bruxo da Frasqueira</span>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/telacinza.jpeg" alt="">
-                        <div>
-                            <span class="cidadeNoticia">Natal</span>
-                            <h3>Sem saúde, energia e água: Brasil vive o caos das privatizações</h3>
-                            <span class="autorNoticia">Por Bruxo da Frasqueira</span>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/telacinza.jpeg" alt="">
-                        <div>
-                            <span class="cidadeNoticia">Natal</span>
-                            <h3>Sem saúde, energia e água: Brasil vive o caos das privatizações</h3>
-                            <span class="autorNoticia">Por Bruxo da Frasqueira</span>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/telacinza.jpeg" alt="">
-                        <div>
-                            <span class="cidadeNoticia">Natal</span>
-                            <h3>Sem saúde, energia e água: Brasil vive o caos das privatizações</h3>
-                            <span class="autorNoticia">Por Bruxo da Frasqueira</span>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/telacinza.jpeg" alt="">
-                        <div>
-                            <span class="cidadeNoticia">Natal</span>
-                            <h3>Sem saúde, energia e água: Brasil vive o caos das privatizações</h3>
-                            <span class="autorNoticia">Por Bruxo da Frasqueira</span>
-                        </div>
-                        </a>
-                    </li>
-                
-                </ul>
+            </a>
+        </li>
+    <?php 
+        endwhile; 
+        wp_reset_postdata(); 
+    endif;
+    ?>
+</ul>
+
             </div>
 
             <div class="colunaArtigos">
-                <ul>
+            <ul>
+    <?php 
+    // Busca os 4 posts mais recentes da categoria "Artigo"
+    $query = new WP_Query(array(
+        'category_name'  => 'artigo', // Filtra pela categoria "Artigo"
+        'posts_per_page' => 4, // Limita a 4 posts
+    ));
 
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/etvarginha.jpg" alt="">
-                        <span class="categoria">Artigo</span>
-                        <h3>ET de Varginha foi realmente visto no bairro das Rocas?</h3>
-                        <span class="autorNoticia">Por Paulinho PSTU</span>
-                        </a>
-                    </li>
+    if ($query->have_posts()) : 
+        while ($query->have_posts()) : $query->the_post(); 
+    ?>
+        <li>
+            <a href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()) : ?>
+                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>">
+                <?php else : ?>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/placeholder.jpg" alt="Imagem não disponível">
+                <?php endif; ?>
 
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/fotosmonalisa.jpg" alt="">
-                        <span class="categoria">Artigo</span>
-                        <h3>Das massas às bolhas: problemas conceituais em uma noção difusa</h3>
-                        <span class="autorNoticia">Por Elba Tiúma</span>
-                        </a>
-                    </li>
+                <span class="categoria">
+                    <?php 
+                    $categories = get_the_category();
+                    if (!empty($categories)) {
+                        echo esc_html($categories[0]->name);
+                    }
+                    ?>
+                </span>
 
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/macacodedo.jpg" alt="">
-                        <span class="categoria">Artigo</span>
-                        <h3>O homem ainda faz o que o macaco fazia</h3>
-                        <span class="autorNoticia">Por Kuka Beludo</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>./img/bruno.jpg" alt="">
-                        <span class="categoria">Artigo</span>
-                        <h3>O time até que é bom, o que mata é o goleiro</h3>
-                        <span class="autorNoticia">Por Balan Sah Hola</span>
-                        </a>
-                    </li>
-                </ul>
+                <h3><?php the_title(); ?></h3>
+                
+                <span class="autorNoticia">Por <?php the_author(); ?></span>
+            </a>
+        </li>
+    <?php 
+        endwhile; 
+        wp_reset_postdata(); 
+    endif;
+    ?>
+</ul>
             </div>
 
             <div class="colunaCalendario">

@@ -10,4 +10,9 @@ function enqueue_custom_scripts() {
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+add_theme_support('post-thumbnails');
+
+
+
 ?>
