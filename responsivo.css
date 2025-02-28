@@ -4,6 +4,29 @@
         padding: 0 10px;
     }
 
+    .nav-list {
+
+        width: 100vw;
+
+    }
+
+    .paginaAtiva {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10vh;
+        margin-left: 0;
+        gap: 15vw;
+    
+    }
+    
+    .paginaAtiva h1 {
+        font-weight: 100;
+        color: rgb(255, 136, 0);
+        font-size: 1.1rem;
+    }
+
     .menuBtn {
         margin-left: 10px;
     }
