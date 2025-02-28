@@ -164,5 +164,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ALTERNAR SINTE
+// ROLAGEM SUAVE
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.linksMultimidia a span');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetID = this.getAttribute('href');
+            const targetElement = document.querySelector(targetID);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
 

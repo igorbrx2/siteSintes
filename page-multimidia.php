@@ -8,13 +8,16 @@
     <h2>MULTIMÍDIA</h2>
 
     <div class="linksMultimidia">
-        <span>FOTOS</span>
+        <a href="#fotos-multimidia"><span>FOTOS</span></a>
         <p>|</p>
-        <span>VÍDEOS</span>
+        <a href="#videos-multimidia"><span>VÍDEOS</span></a>
     </div>
 
-    <iframe class="albuns" src="/fotos-multimidia" width="100%" style="border:none;"></iframe>
-    <iframe class="videos-multimidia" src="/videos-multimidia" width="100%" style="border:none;"></iframe>
+    <iframe class="albuns" id="fotos-multimidia" src="/fotos-multimidia" width="100%" style="border:none;"></iframe>
+
+    <div class="divisorTitulo"></div>
+
+    <iframe class="videos-multimidia" id="videos-multimidia" src="/videos-multimidia" width="100%" style="border:none;"></iframe>
 </main>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

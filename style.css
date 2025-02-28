@@ -12,6 +12,7 @@ Version: 1.0
 body {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -239,7 +240,9 @@ margin-bottom: 10px;
 .outrasNoticias img {
     display: block;
     width: 150px;
-    height: 100px;
+    height: auto;
+    max-height: 100px;
+    object-fit: cover;
 }
 
 .outrasNoticias {
@@ -282,7 +285,9 @@ margin-bottom: 10px;
 .colunaArtigos img {
     display: block;
     max-width: 200px;
-    height: 15vh;
+    height: auto;
+    max-height: 15vh;
+    object-fit: cover;
 }
 
 .colunaArtigos li a {
@@ -583,6 +588,14 @@ margin-bottom: 10px;
   padding-top: 15vh;
   align-items: center;
   justify-content: center;
+}
+
+#multimidia .divisorTitulo {
+  display: block;
+  width: 90vw;
+  height: 2px;
+  background: #a7a7a7;
+  margin: 10vh 0;
 }
 
 #multimidia h2 {

@@ -20,6 +20,27 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/jquery.js"></script>
 <!-- script.js -->
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/script.js"></script>
+<!-- rolagem suave -->
+<script>
+    jQuery(document).ready(function($) {
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+
+            if (target.length) {
+                event.preventDefault();
+                
+    
+                var offset = 150;
+                
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - offset
+                }, 1000);
+            }
+        });
+    });
+</script>
+
+
 
 <?php wp_footer(); ?>
 </body>
