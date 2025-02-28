@@ -14,7 +14,7 @@
         <div class="conteudo">
 
             <div class="colunas">
-            <div class="colunaNoticias">
+            <div class="colunaNoticias" id="newsContainer">
             <?php 
 
 // Busca o post mais recente
@@ -101,7 +101,7 @@ endif;
             </div>
 
             <div class="colunaArtigos">
-            <ul>
+            <ul id="articlesContainer">
     <?php 
     // Busca os 4 posts mais recentes da categoria "Artigo"
     $query = new WP_Query(array(

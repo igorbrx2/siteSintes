@@ -158,6 +158,47 @@ nav {
     margin-top: 3vh;
 }
 
+/* Estilos para posts dinâmicos na coluna de notícias */
+.colunaNoticias .post-dinamico {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.colunaNoticias .post-dinamico img {
+  display: block;
+  width: 40vw;
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+  padding-bottom: 5px;
+}
+
+.colunaNoticias .post-dinamico .cidadeNoticia {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(253, 39, 39);
+}
+
+.colunaNoticias .post-dinamico h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+}
+
+.colunaNoticias .post-dinamico .autorNoticia {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.colunaNoticias .post-dinamico p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
 /* NOTICIA PRINCIPAL */
 .noticiaPrincipal {
 display: flex;
@@ -278,6 +319,8 @@ margin-bottom: 10px;
     font-size: .6rem;
     font-weight: 500;
 }
+
+
 
 /* CALENDÁRIO */
 .colunaCalendario {
@@ -574,4 +617,12 @@ margin-bottom: 10px;
   display: block;
   height: 1750px;
   width: 70vw;
+}
+
+/* PRIVACIDADE */
+
+#privacidade {
+margin: 0 auto;
+  width: 60vw;
+  padding: 10vh 0;
 }

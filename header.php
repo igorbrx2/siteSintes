@@ -24,11 +24,11 @@
             <span>MENU</span>
         </div>
             <ul class="nav-list">
-                <li><a href="./">Notícias</a></li>
-                <li><a href="">Documentos</a></li>
+                <li><a href="/">Notícias</a></li>
+                <li><a href="/">Documentos</a></li>
                 <li><a href="/multimidia">Multimídia</a></li>
-                <li><a href="">Canais e Redes Sociais</a></li>
-                <li><a href="">Política de Privacidade</a></li>
+                <li><a href="/">Canais e Redes Sociais</a></li>
+                <li><a href="/privacidade">Política de Privacidade</a></li>
             </ul>
             <a class="logo" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>./img/logo.png" alt=""></a>
             <img class="pesquisa" src="<?php echo get_stylesheet_directory_uri(); ?>./img/pesquisar.png" alt="">

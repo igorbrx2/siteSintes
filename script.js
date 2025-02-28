@@ -1,4 +1,3 @@
-
 // MENU HAMBURGER
 
 class MobileNavbar {
@@ -10,7 +9,6 @@ class MobileNavbar {
 
         this.handleClick = this.handleClick.bind(this);
     }
-
 
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
@@ -120,7 +118,6 @@ const renderCalendar = () => {
     updateEvents(date);
 };
 
-
 const updateEvents = (selectedDate) => {
     const eventsDiv = document.querySelector('.events');
     const month = selectedDate.getMonth();
@@ -167,4 +164,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// ALTERNAR SINTE
 
