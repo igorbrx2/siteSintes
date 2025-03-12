@@ -100,6 +100,7 @@ endif;
 
             </div>
 
+
             <div class="colunaArtigos">
             <ul id="articlesContainer">
     <?php 
