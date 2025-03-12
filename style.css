@@ -147,20 +147,13 @@ nav {
 }
 
 .paginaAtiva {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: auto;
   max-width: 40vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 10vh;
   margin-left: 14vw;
-
 }
 
 .paginaAtiva h1 {

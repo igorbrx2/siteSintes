@@ -1,7 +1,7 @@
 @media (max-width: 599px) {
 
     header {
-        padding: 0 10px;
+        padding-right: 9vw;
     }
 
     .nav-list {
@@ -11,20 +11,18 @@
     }
 
     .paginaAtiva {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10vh;
-        margin-left: 0;
-        gap: 15vw;
-    
-    }
+        justify-content: center; /* Centraliza os itens */
+        align-items: center; /* Alinha os itens no centro */
+        padding-left: 5vw; /* Remove o margin-left */
+        max-width: 90vw; /* Aumenta a largura máxima para 90% da largura da tela */
+        padding-top: 5vh; /* Ajusta o padding-top para telas menores */
+      }
     
     .paginaAtiva h1 {
         font-weight: 100;
         color: rgb(255, 136, 0);
         font-size: 1.1rem;
+        padding-right: 20vh;
     }
 
     .menuBtn {
