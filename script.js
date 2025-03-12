@@ -201,4 +201,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// coluna noticias
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+    const noticiasSections = document.querySelectorAll(".noticias-section");
+
+    // Função para mostrar a seção correta e esconder as outras
+    function showSection(target) {
+        noticiasSections.forEach(section => {
+            section.style.display = section.classList.contains(target) ? "block" : "none";
+        });
+    }
+
+    // Garante que o MMS seja carregado por padrão
+    dropdownButton.textContent = "MMS";
+    showSection("mmsNoticias"); // Garante que a seção MMS apareça por padrão
+
+    // Adiciona evento de clique aos links do dropdown
+    dropdownLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Atualiza o botão e mostra a seção correta
+            const selectedValue = link.getAttribute("data-value");
+            dropdownButton.textContent = selectedValue;
+
+            const targetSection = link.getAttribute("data-target");
+            showSection(targetSection);
+        });
+    });
+});
 

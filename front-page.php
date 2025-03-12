@@ -11,10 +11,10 @@
         <div class="dropdown">
     <button class="btnPage" id="dropdownButton">MMS</button>
     <div class="dropdown-content">
-        <a href="#" data-value="MMS">MMS</a>
-        <a href="#" data-value="São Gonçalo">São Gonçalo</a>
-        <a href="#" data-value="Ceará-Mirim">Ceará-Mirim</a>
-        <a href="#" data-value="Umarizal">Umarizal</a>
+        <a href="#" data-value="MMS" data-target="mmsNoticias">MMS</a>
+        <a href="#" data-value="São Gonçalo" data-target="sgaNoticias">São Gonçalo</a>
+        <a href="#" data-value="Ceará-Mirim" data-target="cmNoticias">Ceará-Mirim</a>
+        <a href="#" data-value="Umarizal" data-target="uzlNoticias">Umarizal</a>
     </div>
 </div>
 
@@ -25,30 +25,30 @@
 
             <div class="colunas">
             
-            <div class="mmsNoticias">
-            <?php get_template_part('mms-noticias'); ?>
-            </div>
+    <div class="mmsNoticias noticias-section">
+        <?php get_template_part('mms-noticias'); ?>
+    </div>
 
-            <div class="sgaNoticias">
-            <?php get_template_part('sga-noticias'); ?>
-            </div>
+    <div class="sgaNoticias noticias-section" style="display: none;">
+        <?php get_template_part('sga-noticias'); ?>
+    </div>
 
-            <div class="cmNoticias">
-            <?php get_template_part('cm-noticias'); ?>
-            </div>
+    <div class="cmNoticias noticias-section" style="display: none;">
+        <?php get_template_part('cm-noticias'); ?>
+    </div>
 
-            <div class="uzlNoticias">
-            <?php get_template_part('uzl-noticias'); ?>
-            </div>
+    <div class="uzlNoticias noticias-section" style="display: none;">
+        <?php get_template_part('uzl-noticias'); ?>
+    </div>
 
 
             <div class="colunaArtigos">
             <ul id="articlesContainer">
     <?php 
-    // Busca os 4 posts mais recentes da categoria "Artigo"
+
     $query = new WP_Query(array(
-        'category_name'  => 'artigo', // Filtra pela categoria "Artigo"
-        'posts_per_page' => 4, // Limita a 4 posts
+        'category_name'  => 'artigo',
+        'posts_per_page' => 4,
     ));
 
     if ($query->have_posts()) : 
@@ -107,7 +107,6 @@
                       <div class="days" style="font-size: .7rem; font-weight: 900; color: rgb(43, 43, 43);"></div>
                     </div>
                     <div class="agenda">
-                      <!-- <div class="prox-eventos"><span class="montserrat-font">PRÓXIMOS EVENTOS</span></div> -->
                       <div class="events montserrat-font" style="line-height: 1.1;"></div>
                     </div>
                   </div>
