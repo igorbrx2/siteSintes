@@ -29,9 +29,10 @@ body {
           box-sizing: border-box;
 }
 
-a {
+a, a:focus, a:hover, a:active {
   text-decoration: none;
   color: inherit;
+
 }
 
 ul {
@@ -395,6 +396,7 @@ margin-bottom: 10px;
      object-fit: cover;
 }
 
+
 .colunaArtigos li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,7 +447,7 @@ margin-bottom: 10px;
 
 
 /* CALENDÁRIO */
-.colunaCalendario iframe {
+.colunaCalendario {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

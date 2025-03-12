@@ -1,4 +1,4 @@
-@media (max-width: 770px) {
+@media (max-width: 599px) {
 
     header {
         padding: 0 10px;
@@ -57,19 +57,31 @@
         width: 90vw;
     }
 
-    .outrasNoticias li {
-        width: 100%;
-        margin: 10px 0;
-    }
+    .colunaArtigos ul li a {
+        width: 40vw;
+      }
 
-    .colunaArtigos ul {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .colunaArtigos li {
+      .colunaArtigos ul {
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
-    }
+        margin-top: 3vh;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        list-style: none;
+      }
+
+      .colunaArtigos ul img {
+        display: block;
+        width: 40vw;
+        max-width: auto;
+        height: 200px;
+        max-height: 15vh;
+        -o-object-fit: cover;
+           object-fit: cover;
+      }
+
 
     .colunaCalendario {
         width: 90vw;
@@ -78,18 +90,18 @@
 
     .container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: start;
         margin: 0 auto;
         gap: 3vw;
       }
 
     .calendar {
-       width: 40vw;
+       width: 80vw;
      }
 
      .agenda {
-        width: 40vw;
+        width: 80vw;
         height: auto;
       }
 
@@ -108,12 +120,19 @@
 
     .videosMMS {
         width: 90vw;
+
       }
+
+      .videosMMS iframe {
+        height: 60vh;
+        }
 
     .mmsInformacoes {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+        max-width: 90vw;
+        margin: 0 auto;
     }
 
         .outrasNoticias {
