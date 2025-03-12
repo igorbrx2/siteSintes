@@ -185,5 +185,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// dropdown
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+
+    dropdownLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+
+            // Atualiza o texto do botão com o valor do link clicado
+            dropdownButton.textContent = link.getAttribute("data-value");
+        });
+    });
+});
 
 

@@ -7,7 +7,17 @@
     <main>
 
         <div class="paginaAtiva">
-            <a class="btnPage" href="./">MMS</a>
+
+        <div class="dropdown">
+    <button class="btnPage" id="dropdownButton">MMS</button>
+    <div class="dropdown-content">
+        <a href="#" data-value="MMS">MMS</a>
+        <a href="#" data-value="São Gonçalo">São Gonçalo</a>
+        <a href="#" data-value="Ceará-Mirim">Ceará-Mirim</a>
+        <a href="#" data-value="Umarizal">Umarizal</a>
+    </div>
+</div>
+
             <h1 class="page">GERAL</h1>
         </div>
 
@@ -15,7 +25,21 @@
 
             <div class="colunas">
             
+            <div class="mmsNoticias">
             <?php get_template_part('mms-noticias'); ?>
+            </div>
+
+            <div class="sgaNoticias">
+            <?php get_template_part('sga-noticias'); ?>
+            </div>
+
+            <div class="cmNoticias">
+            <?php get_template_part('cm-noticias'); ?>
+            </div>
+
+            <div class="uzlNoticias">
+            <?php get_template_part('uzl-noticias'); ?>
+            </div>
 
 
             <div class="colunaArtigos">
