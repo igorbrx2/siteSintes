@@ -25,7 +25,7 @@
             <span>MENU</span>
         </div>
             <ul class="nav-list">
-                <li><a href="/">Notícias</a></li>
+                <li><a href="/noticias">Notícias</a></li>
                 <li><a href="/">Documentos</a></li>
                 <li><a href="/multimidia">Multimídia</a></li>
                 <li><a href="/">Canais e Redes Sociais</a></li>

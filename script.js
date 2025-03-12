@@ -207,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownButton = document.getElementById("dropdownButton");
     const dropdownLinks = document.querySelectorAll(".dropdown-content a");
     const noticiasSections = document.querySelectorAll(".noticias-section");
+    const dropdownContent = document.querySelector(".dropdown-content");
 
     // Função para mostrar a seção correta e esconder as outras
     function showSection(target) {
@@ -219,6 +220,13 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownButton.textContent = "MMS";
     showSection("mmsNoticias"); // Garante que a seção MMS apareça por padrão
 
+    // Função para alternar a visibilidade do dropdown no mobile
+    function toggleDropdown() {
+        if (window.innerWidth <= 768) {  // Ajuste para a largura que você considera "mobile"
+            dropdownContent.classList.toggle("show");
+        }
+    }
+
     // Adiciona evento de clique aos links do dropdown
     dropdownLinks.forEach(link => {
         link.addEventListener("click", function (event) {
@@ -230,7 +238,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const targetSection = link.getAttribute("data-target");
             showSection(targetSection);
+
+            // Se em mobile, fecha o dropdown após o clique
+            toggleDropdown();
         });
     });
+
+    // Adiciona evento de clique ao botão de dropdown
+    dropdownButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        toggleDropdown();
+    });
+
+    // Verifica a largura da tela ao redimensionar para garantir a visibilidade correta
+    window.addEventListener("resize", function() {
+        if (window.innerWidth > 768) {
+            dropdownContent.classList.remove("show"); // Certifica que o dropdown não fique visível no desktop
+        }
+    });
 });
+
+
 
