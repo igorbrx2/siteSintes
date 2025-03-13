@@ -3,7 +3,7 @@
 <ul class="linksPosts">
     <li><a href="/home">HOME</a></li>
     <li><span>|</span></li>
-    <li><a href="/home">Notícias</a></li>
+    <li><a href="/noticias">Notícias</a></li>
 </ul>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

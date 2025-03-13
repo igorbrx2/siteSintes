@@ -28,7 +28,7 @@
                 <li><a href="/noticias">Notícias</a></li>
                 <li><a href="/">Documentos</a></li>
                 <li><a href="/multimidia">Multimídia</a></li>
-                <li><a href="/">Canais e Redes Sociais</a></li>
+                <li><a href="/midias-sociais">Mídias Sociais</a></li>
                 <li><a href="/privacidade">Política de Privacidade</a></li>
             </ul>
             <a class="logo" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>./img/logo.png" alt=""></a>
