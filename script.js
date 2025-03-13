@@ -258,5 +258,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// PESQUISA
 
+document.addEventListener("DOMContentLoaded", function () {
+    const searchIcon = document.getElementById("searchIcon");
+    const searchForm = document.getElementById("searchForm");
 
+    searchIcon.addEventListener("click", function (event) {
+        event.preventDefault();
+        searchForm.classList.toggle("search-hidden");
+    });
+});

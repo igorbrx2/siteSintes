@@ -32,7 +32,19 @@
                 <li><a href="/privacidade">Política de Privacidade</a></li>
             </ul>
             <a class="logo" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>./img/logo.png" alt=""></a>
-            <img class="pesquisa" src="<?php echo get_stylesheet_directory_uri(); ?>./img/pesquisar.png" alt="">
+
+            <div class="pesquisa">
+    <button id="searchIcon">
+        <img class="pesquisaIcone" src="<?php echo get_stylesheet_directory_uri(); ?>/img/pesquisar.png" alt="Pesquisar">
+    </button>
+    <form id="searchForm" action="<?php echo home_url('/'); ?>" method="get" class="search-hidden">
+        <input type="text" style="border-radius: 45px; border:none; width: 15vw; box-sizing:border-box;text-align:center;" name="s" placeholder="Buscar no site..." required>
+        <!-- <button type="submit"></button> -->
+    </form>
+</div>
+
+
         </nav>
+
     </header>
     

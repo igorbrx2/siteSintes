@@ -44,5 +44,10 @@ remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
+function custom_scripts() {
+    wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/script.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'custom_scripts');
+
 
 ?>
