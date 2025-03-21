@@ -1,4 +1,4 @@
-@media (max-width: 599px) {
+@media (min-width: 320px) {
 
     header {
         padding-right: 9vw;
@@ -15,11 +15,11 @@
       }
 
     .paginaAtiva {
-        justify-content: center; /* Centraliza os itens */
-        align-items: center; /* Alinha os itens no centro */
-        padding-left: 5vw; /* Remove o margin-left */
-        max-width: 90vw; /* Aumenta a largura máxima para 90% da largura da tela */
-        padding-top: 5vh; /* Ajusta o padding-top para telas menores */
+        justify-content: center;
+        align-items: center;
+        padding-left: 5vw;
+        max-width: 90vw;
+        padding-top: 5vh;
       }
     
     .paginaAtiva h1 {
@@ -194,3 +194,9 @@
         }
 
     }
+
+@media (min-width:768px) and (max-width:1024px) {
+    .colunaArtigos ul li a {
+        width: 30vw;
+      }
+}

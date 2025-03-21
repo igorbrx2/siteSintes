@@ -1,11 +1,4 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/*
 Theme Name: Muda Sinte/RN
 Theme URI: http://rest.com
 Author: Igor Gomes
@@ -385,7 +378,7 @@ margin-bottom: 10px;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: start;
   gap: 20px;
   list-style: none;
 }
@@ -458,6 +451,8 @@ margin-bottom: 10px;
       -ms-flex-pack: center;
           justify-content: center;
   list-style: none;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .colunaArtigos .categoria {
