@@ -10,8 +10,10 @@
 
     }
 
-    .pesquisaIcone {
-        width: 5vw;
+    dialog {
+        padding-right: 23vw;
+        width: 90vw;
+        height: 90vh;
       }
 
     .paginaAtiva {

@@ -259,12 +259,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // PESQUISA
 
-document.addEventListener("DOMContentLoaded", function () {
-    const searchIcon = document.getElementById("searchIcon");
-    const searchForm = document.getElementById("searchForm");
+const pesquisa = document.querySelector(".pesquisa");
+const modal = document.querySelector("dialog");
+const botaoFechar = document.querySelector("dialog button");
 
-    searchIcon.addEventListener("click", function (event) {
-        event.preventDefault();
-        searchForm.classList.toggle("search-hidden");
-    });
-});
+// Abre o modal ao clicar na pesquisa
+pesquisa.onclick = function () {
+    modal.showModal();
+};
+
+// Fecha o modal ao clicar no botão de fechar
+botaoFechar.onclick = function () {
+    modal.close();
+};
+
+// Fecha o modal ao clicar fora do conteúdo
+modal.onclick = function (event) {
+    // Verifica se o clique foi fora do conteúdo do modal
+    if (event.target === modal) {
+        modal.close();
+    }
+};
