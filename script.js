@@ -38,8 +38,8 @@ mobileNavbar.init();
 const date = new Date();
 // Definindo os compromissos diretamente no código
 const compromissos = {
-    "2025-03-21": ["Assembleia do Estado em Ceará-Mirim - 08h no Centro Esportivo Cultural"],
-    "2025-03-29": ["Caminhada pelo Centro Histórico de Natal - 14h na Igreja Matriz"],
+    "2025-03-21": ["21 - Assembleia do Estado em Ceará-Mirim | 08h no Centro Esportivo Cultural"],
+    "2025-03-29": ["29 - Caminhada pelo Centro Histórico de Natal | 14h na Igreja Matriz"],
     // Adicione mais compromissos conforme necessário
 };
 
