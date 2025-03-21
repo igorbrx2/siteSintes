@@ -1,4 +1,4 @@
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width:767px) {
 
     header {
         padding-right: 9vw;
@@ -196,7 +196,198 @@
     }
 
 @media (min-width:768px) and (max-width:1024px) {
+
+    header {
+        padding-right: 9vw;
+    }
+
+    .nav-list {
+
+        width: 100vw;
+
+    }
+
+    .pesquisaIcone {
+        width: 5vw;
+      }
+
+    .paginaAtiva {
+        justify-content: center;
+        align-items: center;
+        padding-left: 5vw;
+        max-width: 90vw;
+        padding-top: 5vh;
+      }
+    
+    .paginaAtiva h1 {
+        font-weight: 100;
+        color: rgb(255, 136, 0);
+        font-size: 1.1rem;
+        padding-right: 20vh;
+    }
+
+    .menuBtn {
+        margin-left: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .pesquisa {
+        width: 20px;
+    }
+    .colunas {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .conteudo {
+        padding: 10px;
+    }
+
+    .colunaNoticias, .colunaArtigos, .colunaCalendario {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .noticiaPrincipal img {
+        width: 90vw;
+    }
+
     .colunaArtigos ul li a {
         width: 30vw;
       }
+
+      .colunaArtigos ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 3vh;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        list-style: none;
+      }
+
+      .colunaArtigos ul img {
+        display: block;
+        width: 40vw;
+        max-width: auto;
+        height: 200px;
+        max-height: 15vh;
+        -o-object-fit: cover;
+           object-fit: cover;
+      }
+
+
+    .colunaCalendario {
+        width: 70vw;
+        height: auto;
+        margin-bottom: 3vh;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 0 auto;
+        gap: 3vw;
+      }
+
+    .calendar {
+       width: 65vw;
+     }
+
+     .agenda {
+        width: 65vw;
+        height: auto;
+      }
+
+      .paginaAtiva {
+        justify-content: start;
+        width: 52vw;
+        padding-top: 10vh;
+        padding-right: 0;
+        margin-left: 12vw;
+        margin-right: 0;
+    }
+    
+        .paginaAtiva h1 {
+        margin-left: 22vw;
+    }
+
+    .videosMMS {
+        width: 90vw;
+
+      }
+
+      .videosMMS iframe {
+        height: 60vh;
+        }
+
+    .mmsInformacoes {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+        .outrasNoticias {
+            width: 90vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+    
+        .outrasNoticias li {
+            width: calc(50% - 10px);
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .outrasNoticias li a {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; 
+        }
+    
+        .outrasNoticias img {
+            width: 100%; 
+            height: auto; 
+        }
+    
+        .outrasNoticias h3 {
+            text-align: left; 
+        }
+    
+        .outrasNoticias .cidadeNoticia,
+        .outrasNoticias .autorNoticia {
+            text-align: center; /* Centraliza o texto da cidade e do autor */
+        }
+
+        .colunaArtigos ul {
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+            list-style: none;
+            padding-bottom: 30px;
+        }
+
+        .colunaArtigos li a {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 30vw;
+        }
 }

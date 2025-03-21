@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 <ul class="linksPosts">
-    <li><a href="/home">HOME</a></li>
+    <li><a href="/home">Home</a></li>
     <li><span>|</span></li>
     <li><a href="/noticias">Notícias</a></li>
 </ul>
