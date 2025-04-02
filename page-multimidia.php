@@ -13,11 +13,15 @@
         <a href="#videos-multimidia"><span>VÍDEOS</span></a>
     </div>
 
-    <iframe class="albuns" id="fotos-multimidia" src="/fotos-multimidia" width="100%" style="border:none;"></iframe>
+    <div class="albuns" id="fotos-multimidia" width="100%" style="border:none;">
+    <?php echo do_shortcode('[foogallery-album id="123"] [foogallery-album id="122"]'); ?>
+    </div>
 
     <div class="divisorTitulo"></div>
 
-    <iframe class="videos-multimidia" id="videos-multimidia" src="/videos-multimidia" width="100%" style="border:none;"></iframe>
+    <div class="videos-multimidia" id="videos-multimidia" width="100%" style="border:none;">
+    <?php echo do_shortcode('[youtube-feed feed=1]'); ?>
+    </div>
 </main>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

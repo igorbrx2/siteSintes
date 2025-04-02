@@ -42,7 +42,7 @@
 
         <dialog>
             <div class="barra">
-            <?php echo do_shortcode('[wpdreams_ajaxsearchpro id=2]'); ?>
+            <?php echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); ?>
             </div>
         </dialog>
 

@@ -616,6 +616,7 @@ width: 70%;
 
 .videosMMS iframe {
 height: 100vh;
+margin-bottom: 10vh;
 }
 
 #videos {
@@ -807,7 +808,7 @@ display: block;
 width: 90vw;
 height: 2px;
 background: #a7a7a7;
-margin: 10vh 0;
+margin: 5vh 0;
 }
 
 #multimidia h2 {
@@ -846,8 +847,9 @@ padding-bottom: 5vh;
 
 #multimidia .videos-multimidia {
 display: block;
-height: 1750px;
+height: auto;
 width: 70vw;
+margin-bottom: 5vh;
 }
 
 /* PRIVACIDADE */

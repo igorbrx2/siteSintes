@@ -119,7 +119,9 @@
         <h2>VÍDEOS</h2>
 
         <div class="videosMMS">
-        <iframe src="/videos" width="100%" style="border:none;"></iframe>
+        <iframe src="/videos" width="100%" style="border:none;">
+        <?php echo do_shortcode('[feed_them_social cpt_id=85]'); ?>
+        </iframe>
         </div>
 
         </section>
