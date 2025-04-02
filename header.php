@@ -33,9 +33,9 @@
                 <li><a href="/privacidade">Política de Privacidade</a></li>
             </ul>
 
-            <a class="logo" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>./img/logo.png" alt=""></a>
+            <a class="logo" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""></a>
 
-            <img class="pesquisa" src="<?php echo get_stylesheet_directory_uri(); ?>./img/pesquisar.png" alt="">
+            <img class="pesquisa" src="<?php echo get_stylesheet_directory_uri(); ?>/img/pesquisar.png" alt="">
 
 
         </nav>

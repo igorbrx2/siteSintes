@@ -88,12 +88,12 @@
                 <div class="container" id="agenda">
                     <div class="calendar">
                       <div class="month">
-                        <i class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>./img/setaEsquerda.png" alt=""></i>
+                        <i class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/setaEsquerda.png" alt=""></i>
                         <div class="date">
                           <h1></h1>
                           <p class="montserrat-font"></p>
                         </div>
-                        <i class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>./img/setaDireita.png" alt=""></i>
+                        <i class="next"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/setaDireita.png" alt=""></i>
                       </div>
                       <div class="weekdays" style="font-size: .5rem; font-weight: 900; color: rgb(43, 43, 43);">
                         <div style="color: rgb(253, 39, 39)">D</div>
