@@ -787,20 +787,11 @@ padding: 5vh 0;
 /* MULTIMIDIA */
 
 #multimidia {
-display: -webkit-box;
-display: -ms-flexbox;
 display: flex;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
+flex-direction: column;
 padding-top: 15vh;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
--webkit-box-pack: center;
-    -ms-flex-pack: center;
-        justify-content: center;
+align-items: center;
+justify-content: center;
 }
 
 #multimidia .divisorTitulo {
@@ -823,7 +814,7 @@ display: -ms-flexbox;
 display: flex;
 gap: 10px;
 padding-top: 5vh;
-padding-bottom: 5vh;
+/* padding-bottom: 5vh; */
 color: rgb(255, 136, 0);
 }
 
@@ -840,9 +831,8 @@ transition: ease-in-out .2s;
 .albuns {
 display: block;
 max-width: 95vw;
-height: 60vh;
+height: auto;
 margin: 0 auto;
-padding-bottom: 5vh;
 }
 
 #multimidia .videos-multimidia {
