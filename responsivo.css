@@ -190,6 +190,23 @@
     width: 20vw;
   }
 
+  .documentoRecente {
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  .documentoRecente img {
+    width: 90vw;
+  }
+
+  .descricaoDoc {
+    width: 90vw;
+  }
+
+  .cardDoc {
+    width: 90vw;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

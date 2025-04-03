@@ -823,18 +823,20 @@ nav {
 
 .todosDoc {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 75%;
   max-width: 90vw;
   margin: 0 auto;
   padding-top: 5vh;
   padding-bottom: 5vh;
+  gap: 5vw;
 }
 
 .cardDoc {
   display: flex;
   flex-direction: column;
   width: 20vw;
-  min-width: 250px;
 }
 
 .cardDoc img {
