@@ -608,15 +608,13 @@ margin-bottom: 10px;
 /* VIDEOS */
 
 .videosMMS {
-display: -webkit-box;
-display: -ms-flexbox;
 display: flex;
-width: 70%;
+width: 75%;
+height: auto;
 }
 
 .videosMMS iframe {
 height: 100vh;
-margin-bottom: 10vh;
 }
 
 #videos {
@@ -899,3 +897,34 @@ padding: 10vh 0;
   font-size: 2.5rem;
 }
 
+/* MÍDIAS SOCIAIS */
+.midiash2 {
+font-weight: 100;
+  color: rgb(255, 136, 0);
+  font-size: 1.3rem;
+  padding-top: 15vh;
+  text-align: center;
+}
+
+.botoesMidias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  font-size: 1.2rem;
+  color: rgb(255, 136, 0);
+  padding-top: 5vh;
+  max-width: 95vw;
+}
+
+.botoesMidias li:not(:last-child)::after {
+  content: " | ";
+  color: rgb(255, 136, 0);
+  margin-left: 5vw;
+}
+
+.botoesMidias li:hover {
+  color: rgb(214, 111, 0);
+  transition: ease-in-out .3s;
+}
