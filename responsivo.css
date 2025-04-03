@@ -207,6 +207,26 @@
     width: 90vw;
   }
 
+  .noticiaPrincipalpage img {
+    width: 100%;
+  }
+
+  .noticiaPrincipalpage {
+    width: 90vw;
+  }
+
+  .noticiaPrincipalpage p {
+    width: 100%;
+  }
+
+  #corpoPosts {
+    width: 90vw;
+  }
+
+  #multimidia .videos-multimidia {
+    width: 90vw;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -415,6 +435,18 @@
 
   .cardDoc {
     width: 40vw;
+  }
+
+  .noticiaPrincipalpage img {
+    width: 100%;
+  }
+
+  .noticiaPrincipalpage {
+    width: 90vw;
+  }
+
+  .noticiaPrincipalpage p {
+    width: 100%;
   }
 
 }

@@ -594,6 +594,10 @@ nav {
 
 /* POSTS */
 
+.corpoTexto img {
+  padding-bottom: 2vh;
+}
+
 .linksPosts {
   display: flex;
   justify-content: center;
@@ -612,7 +616,7 @@ nav {
 #corpoPosts {
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 75vw;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -642,7 +646,6 @@ nav {
 }
 
 .corpoTexto {
-  width: 60vw;
   padding: 5vh 0;
 }
 
@@ -685,7 +688,7 @@ nav {
 
 .albuns {
   display: block;
-  max-width: 95vw;
+  width: 90vw;;
   height: auto;
   margin: 0 auto;
 }

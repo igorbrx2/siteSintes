@@ -73,7 +73,7 @@
 
                 <h3><?php the_title(); ?></h3>
                 
-                <span class="autorNoticia">Por <?php the_author(); ?></span>
+                <span class="autorNoticia">publicado por <?php the_author(); ?></span>
             </a>
         </li>
     <?php 

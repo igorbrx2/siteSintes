@@ -28,7 +28,7 @@ if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
 
             <h2><?php the_title(); ?></h2>
             
-            <span class="autorNoticia">Por <?php the_author(); ?></span>
+            <span class="autorNoticia">publicado por <?php the_author(); ?></span>
 
             <p><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
         </a>
@@ -71,7 +71,7 @@ endif;
 
                     <h3><?php the_title(); ?></h3>
                     
-                    <span class="autorNoticia">Por <?php the_author(); ?></span>
+                    <span class="autorNoticia">publicado por <?php the_author(); ?></span>
                 </div>
             </a>
         </li>

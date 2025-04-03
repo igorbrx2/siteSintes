@@ -27,7 +27,7 @@
         }
         ?>
 	</span>
-    <span class="autorNoticia"><?php the_author(); ?></span>
+    <span class="autorNoticia">publicado por <?php the_author(); ?></span>
 
 	<div class="corpoTexto">
 	<?php the_content(); ?>
