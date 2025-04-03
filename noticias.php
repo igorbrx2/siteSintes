@@ -11,7 +11,7 @@
 <?php 
 $query = new WP_Query(array(
     'posts_per_page' => 1,
-    'category__not_in' => array(get_cat_ID('Artigo')),
+    'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos')),
 ));
 
 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); 

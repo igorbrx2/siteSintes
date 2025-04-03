@@ -189,6 +189,7 @@
     gap: 5px;
     width: 20vw;
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -381,4 +382,22 @@
     gap: 5px;
     width: 30vw;
   }
+
+  .documentoRecente {
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  .documentoRecente img {
+    width: 90vw;
+  }
+
+  .descricaoDoc {
+    width: 90vw;
+  }
+
+  .cardDoc {
+    width: 40vw;
+  }
+
 }
