@@ -307,3 +307,4 @@ modal.onclick = function (event) {
     // Adiciona um listener para redimensionamento da janela
     window.addEventListener("resize", movePesquisa);
   });
+
