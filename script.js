@@ -280,3 +280,30 @@ modal.onclick = function (event) {
         modal.close();
     }
 };
+
+// COLOCAR PESQUISA NO NAV EM Mobile
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const pesquisa = document.querySelector(".pesquisa");
+    const navList = document.querySelector(".nav-list");
+
+    function movePesquisa() {
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
+        if (!navList.contains(pesquisa)) {
+          navList.appendChild(pesquisa);
+        }
+      } else {
+        // Retorna a div "pesquisa" para fora da ul.nav-list em telas maiores
+        const nav = document.querySelector("nav");
+        if (nav && !nav.contains(pesquisa)) {
+          nav.appendChild(pesquisa);
+        }
+      }
+    }
+
+    // Executa a função ao carregar a página
+    movePesquisa();
+
+    // Adiciona um listener para redimensionamento da janela
+    window.addEventListener("resize", movePesquisa);
+  });

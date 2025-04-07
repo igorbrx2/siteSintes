@@ -35,7 +35,7 @@
 
             <a class="logo" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""></a>
 
-            <img class="pesquisa" src="<?php echo get_stylesheet_directory_uri(); ?>/img/pesquisar.png" alt="">
+            <div class="pesquisa" ><?php echo do_shortcode('[wpdreams_ajaxsearchpro id=2]'); ?></div>
 
 
         </nav>
