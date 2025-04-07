@@ -1,5 +1,9 @@
 @media (min-width: 320px) and (max-width: 767px) {
 
+  .noticiasLista {
+    gap: 3vw;
+  }
+
   .nav-list {
     width: 100vw;
   }
@@ -244,6 +248,15 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .noticiaCard {
+    min-width: 350px;
+  }
+
+  .noticiasLista {
+    width: 100vw;
+    gap: 3vw;
+  }
 
   nav {
     display: flex;
