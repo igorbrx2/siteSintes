@@ -40,7 +40,6 @@ const date = new Date();
 const compromissos = {
     "2025-03-21": ["21 - Assembleia do Estado em Ceará-Mirim | 08h no Centro Esportivo Cultural"],
     "2025-03-29": ["29 - Caminhada pelo Centro Histórico de Natal | 14h na Igreja Matriz"],
-    // Adicione mais compromissos conforme necessário
 };
 
 const findNearestDayWithAppointments = (selectedDate) => {
@@ -80,18 +79,16 @@ const renderCalendar = () => {
 
     let days = "";
 
-    // Preenche os dias do mês anterior
     for (let x = firstDayIndex; x > 0; x--) {
         const day = prevLastDay - x + 1;
         const dayOfWeek = new Date(date.getFullYear(), date.getMonth() - 1, day).getDay();
-        const isSunday = dayOfWeek === 0; // Verifica se é domingo
+        const isSunday = dayOfWeek === 0;
         days += `<div class="prev-date${isSunday ? ' sunday' : ''}">${day}</div>`;
     }
 
-    // Preenche os dias do mês atual
     for (let i = 1; i <= lastDay; i++) {
         const currentDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
-        const dayOfWeek = new Date(date.getFullYear(), date.getMonth(), i).getDay(); // Dia da semana
+        const dayOfWeek = new Date(date.getFullYear(), date.getMonth(), i).getDay();
         const isSunday = dayOfWeek === 0;
 
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
@@ -105,10 +102,9 @@ const renderCalendar = () => {
         }
     }
 
-    // Preenche os dias do próximo mês
     for (let j = 1; j <= nextDays; j++) {
         const dayOfWeek = new Date(date.getFullYear(), date.getMonth() + 1, j).getDay();
-        const isSunday = dayOfWeek === 0; // Verifica se é domingo
+        const isSunday = dayOfWeek === 0;
         days += `<div class="next-date${isSunday ? ' sunday' : ''}">${j}</div>`;
     }
 
@@ -157,8 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
 
     btn.addEventListener("click", function (event) {
-        event.preventDefault(); // Evita que o link recarregue a página
-        index = (index + 1) % labels.length; // Alterna entre os rótulos
+        event.preventDefault();
+        index = (index + 1) % labels.length;
         btn.textContent = labels[index];
     });
 });
@@ -192,15 +188,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dropdownLinks.forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Impede o comportamento padrão do link
+            event.preventDefault();
 
-            // Atualiza o texto do botão com o valor do link clicado
             dropdownButton.textContent = link.getAttribute("data-value");
         });
     });
 });
 
-// coluna noticias
+// COLUNA NOTICIAS
 
 document.addEventListener("DOMContentLoaded", function () {
     const dropdownButton = document.getElementById("dropdownButton");
@@ -208,78 +203,46 @@ document.addEventListener("DOMContentLoaded", function () {
     const noticiasSections = document.querySelectorAll(".noticias-section");
     const dropdownContent = document.querySelector(".dropdown-content");
 
-    // Função para mostrar a seção correta e esconder as outras
     function showSection(target) {
         noticiasSections.forEach(section => {
             section.style.display = section.classList.contains(target) ? "block" : "none";
         });
     }
 
-    // Garante que o MMS seja carregado por padrão
     dropdownButton.textContent = "MMS";
-    showSection("mmsNoticias"); // Garante que a seção MMS apareça por padrão
+    showSection("mmsNoticias");
 
-    // Função para alternar a visibilidade do dropdown no mobile
     function toggleDropdown() {
-        if (window.innerWidth <= 768) {  // Ajuste para a largura que você considera "mobile"
+        if (window.innerWidth <= 768) {
             dropdownContent.classList.toggle("show");
         }
     }
 
-    // Adiciona evento de clique aos links do dropdown
     dropdownLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
 
-            // Atualiza o botão e mostra a seção correta
             const selectedValue = link.getAttribute("data-value");
             dropdownButton.textContent = selectedValue;
 
             const targetSection = link.getAttribute("data-target");
             showSection(targetSection);
 
-            // Se em mobile, fecha o dropdown após o clique
             toggleDropdown();
         });
     });
 
-    // Adiciona evento de clique ao botão de dropdown
     dropdownButton.addEventListener("click", function(event) {
         event.preventDefault();
         toggleDropdown();
     });
 
-    // Verifica a largura da tela ao redimensionar para garantir a visibilidade correta
     window.addEventListener("resize", function() {
         if (window.innerWidth > 768) {
-            dropdownContent.classList.remove("show"); // Certifica que o dropdown não fique visível no desktop
+            dropdownContent.classList.remove("show");
         }
     });
 });
-
-// PESQUISA
-
-const pesquisa = document.querySelector(".pesquisa");
-const modal = document.querySelector("dialog");
-const botaoFechar = document.querySelector("dialog button");
-
-// Abre o modal ao clicar na pesquisa
-pesquisa.onclick = function () {
-    modal.showModal();
-};
-
-// Fecha o modal ao clicar no botão de fechar
-botaoFechar.onclick = function () {
-    modal.close();
-};
-
-// Fecha o modal ao clicar fora do conteúdo
-modal.onclick = function (event) {
-    // Verifica se o clique foi fora do conteúdo do modal
-    if (event.target === modal) {
-        modal.close();
-    }
-};
 
 // COLOCAR PESQUISA NO NAV EM Mobile
 
@@ -293,7 +256,6 @@ modal.onclick = function (event) {
           navList.appendChild(pesquisa);
         }
       } else {
-        // Retorna a div "pesquisa" para fora da ul.nav-list em telas maiores
         const nav = document.querySelector("nav");
         if (nav && !nav.contains(pesquisa)) {
           nav.appendChild(pesquisa);
@@ -301,10 +263,8 @@ modal.onclick = function (event) {
       }
     }
 
-    // Executa a função ao carregar a página
     movePesquisa();
 
-    // Adiciona um listener para redimensionamento da janela
     window.addEventListener("resize", movePesquisa);
   });
 
