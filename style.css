@@ -877,17 +877,39 @@ nav {
   color: rgb(255, 136, 0);
   padding-top: 5vh;
   max-width: 95vw;
+  margin: 0 auto;
 }
 
-.botoesMidias li:not(:last-child)::after {
-  content: " | ";
-  color: rgb(255, 136, 0);
-  margin-left: 5vw;
-}
 
 .botoesMidias li:hover {
-  color: rgb(214, 111, 0);
+  transform: scale(1.1);
   transition: ease-in-out 0.3s;
+}
+
+.todasMidias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+  box-sizing: border-box;
+}
+
+#midiasMMS, #midiasSGA, #midiasCM, #midiasUZL {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75vw;
+  margin: 0 auto;
+  padding-top: 3vh;
+  justify-content: center;
+  align-items: start;
+  gap: 1%;
+  box-sizing: border-box;
+}
+
+.fb, .ig {
+  display: flex;
+  width: 49%;
 }
 
 /* DOCUMENTOS */

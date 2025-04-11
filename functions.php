@@ -58,3 +58,9 @@ function custom_posts_endpoint() {
     ));
 }
 add_action('rest_api_init', 'custom_posts_endpoint');
+
+function mms_enqueue_scripts() {
+    // Enqueue your main script file
+    wp_enqueue_script('mms-main-script', get_stylesheet_directory_uri() . '/script.js', array('jquery'), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'mms_enqueue_scripts');

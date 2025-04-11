@@ -249,6 +249,17 @@
     width: 90vw;
   }
 
+  #midiasMMS, #midiasSGA, #midiasCM, #midiasUZL {
+    width: 90vw;
+    
+  }
+
+  .fb, .ig {
+    display: flex;
+    width: 90vw;
+    box-sizing: border-box;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -478,6 +489,17 @@
 
   #multimidia .videos-multimidia {
     width: 90vw;
+  }
+
+  #midiasMMS, #midiasSGA, #midiasCM, #midiasUZL {
+    width: 90vw;
+
+  }
+
+  .fb, .ig {
+    display: flex;
+    width: 90vw;
+    box-sizing: border-box;
   }
 
 }

@@ -10,6 +10,31 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/responsivo.css" media="screen" />
 
     <?php wp_head(); ?>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const pesquisa = document.querySelector(".pesquisa");
+    const navList = document.querySelector(".nav-list");
+
+    function movePesquisa() {
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
+        if (!navList.contains(pesquisa)) {
+          navList.appendChild(pesquisa);
+        }
+      } else {
+        const nav = document.querySelector("nav");
+        if (nav && !nav.contains(pesquisa)) {
+          nav.appendChild(pesquisa);
+        }
+      }
+    }
+
+    movePesquisa();
+
+    window.addEventListener("resize", movePesquisa);
+  });
+</script>
+
 </head>
 
 <body>
@@ -39,12 +64,6 @@
 
 
         </nav>
-
-        <dialog>
-            <div class="barra">
-            <?php echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); ?>
-            </div>
-        </dialog>
 
     </header>
     

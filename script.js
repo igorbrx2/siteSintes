@@ -243,27 +243,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-// COLOCAR PESQUISA NO NAV EM Mobile
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const pesquisa = document.querySelector(".pesquisa");
-    const navList = document.querySelector(".nav-list");
-
-    function movePesquisa() {
-      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
-        if (!navList.contains(pesquisa)) {
-          navList.appendChild(pesquisa);
-        }
-      } else {
-        const nav = document.querySelector("nav");
-        if (nav && !nav.contains(pesquisa)) {
-          nav.appendChild(pesquisa);
-        }
-      }
-    }
-
-    movePesquisa();
-
-    window.addEventListener("resize", movePesquisa);
-  });
