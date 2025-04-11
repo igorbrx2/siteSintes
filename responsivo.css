@@ -221,8 +221,12 @@
     width: 90vw;
   }
 
+  .todosDoc {
+    width: 95vw;
+  }
+
   .cardDoc {
-    width: 90vw;
+    width: 95vw;
   }
 
   .noticiaPrincipalpage img {
@@ -453,8 +457,11 @@
     width: 90vw;
   }
 
+  .todosDoc {
+    width: 95vw;
+  }
   .cardDoc {
-    width: 40vw;
+    width: 43vw;
   }
 
   .noticiaPrincipalpage img {
@@ -467,6 +474,10 @@
 
   .noticiaPrincipalpage p {
     width: 100%;
+  }
+
+  #multimidia .videos-multimidia {
+    width: 90vw;
   }
 
 }

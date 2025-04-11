@@ -85,7 +85,7 @@
             </div>
 
             <div class="colunaCalendario">
-                <div class="container" id="agenda">
+<div class="container" id="agenda">
                     <div class="calendar">
                       <div class="month">
                         <i class="prev"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/setaEsquerda.png" alt=""></i>
@@ -119,9 +119,7 @@
         <h2>VÍDEOS</h2>
 
         <div class="videosMMS">
-        <iframe src="/videos" width="100%" style="border:none;">
-        <?php echo do_shortcode('[feed_them_social cpt_id=85]'); ?>
-        </iframe>
+        <?php echo do_shortcode('[youtube-feed feed=2]'); ?>
         </div>
 
         </section>

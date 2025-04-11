@@ -41,6 +41,8 @@ $args = array(
 $documentos_query = new WP_Query($args);
 
 if ($documentos_query->have_posts()) : ?>
+    
+    
     <main class="todosDoc">
         <?php while ($documentos_query->have_posts()) : $documentos_query->the_post(); ?>
             <div class="cardDoc">
