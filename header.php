@@ -11,30 +11,6 @@
 
     <?php wp_head(); ?>
 
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const pesquisa = document.querySelector(".pesquisa");
-    const navList = document.querySelector(".nav-list");
-
-    function movePesquisa() {
-      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
-        if (!navList.contains(pesquisa)) {
-          navList.appendChild(pesquisa);
-        }
-      } else {
-        const nav = document.querySelector("nav");
-        if (nav && !nav.contains(pesquisa)) {
-          nav.appendChild(pesquisa);
-        }
-      }
-    }
-
-    movePesquisa();
-
-    window.addEventListener("resize", movePesquisa);
-  });
-</script>
-
 </head>
 
 <body>
@@ -61,7 +37,6 @@
             <a class="logo" href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt=""></a>
 
             <div class="pesquisa" ><?php echo do_shortcode('[wpdreams_ajaxsearchpro id=2]'); ?></div>
-
 
         </nav>
 

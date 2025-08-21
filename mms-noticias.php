@@ -59,7 +59,7 @@ endif;
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/placeholder.jpg" alt="Imagem não disponível">
                 <?php endif; ?>
 
-                <div>
+                <div class="infosNoticia">
                     <span class="cidadeNoticia">
                         <?php 
                         $categories = get_the_category();

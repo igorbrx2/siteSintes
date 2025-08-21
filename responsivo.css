@@ -1,4 +1,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
+  .pesquisa {
+    display:none;
+  }
 
   .noticiasLista {
     gap: 3vw;
@@ -43,7 +46,6 @@
     font-weight: 100;
     color: rgb(255, 136, 0);
     font-size: 1.1rem;
-    padding-right: 20vh;
   }
 
   .menuBtn {
@@ -77,7 +79,6 @@
   .noticiaPrincipal img {
     width: 90vw;
   }
-
 
   .colunaArtigos ul li a {
     width: 40vw;
@@ -163,9 +164,13 @@
     margin: 0 auto;
   }
 
+  .infosNoticia {
+    justify-content: start;
+  }
+
   .outrasNoticias li {
     width: calc(50% - 10px);
-    margin: 10px 0;
+    margin: 5px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,8 +180,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
   }
 
   .outrasNoticias img {
@@ -249,21 +252,22 @@
     width: 90vw;
   }
 
-  #midiasMMS, #midiasSGA, #midiasCM, #midiasUZL {
+  #midiasMMS,
+  #midiasSGA,
+  #midiasCM,
+  #midiasUZL {
     width: 90vw;
-    
   }
 
-  .fb, .ig {
+  .fb,
+  .ig {
     display: flex;
     width: 90vw;
     box-sizing: border-box;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
   .noticiaCard {
     min-width: 350px;
   }
@@ -283,7 +287,7 @@
     height: 8vh;
     padding: 0 5vw;
   }
-  
+
   .nav-list {
     width: 100vw;
   }
@@ -404,31 +408,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
     list-style: none;
+    column-gap: 10vw;
     padding: 0;
     margin: 0 auto;
   }
 
+  .infosNoticia {
+  }
+
   .outrasNoticias li {
-    width: calc(50% - 10px);
-    margin: 10px 0;
+    width: 40vw;
+    height: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .outrasNoticias li a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 5px;
   }
 
   .outrasNoticias img {
     width: 100%;
-    height: auto;
+    max-height: 200px;
   }
 
   .outrasNoticias h3 {
@@ -441,18 +446,14 @@
   }
 
   .colunaArtigos ul {
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 15px;
     justify-content: center;
+    align-items: center;
     list-style: none;
     padding-bottom: 30px;
-  }
-
-  .colunaArtigos li a {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 30vw;
+    width: 90vw;
   }
 
   .documentoRecente {
@@ -491,15 +492,17 @@
     width: 90vw;
   }
 
-  #midiasMMS, #midiasSGA, #midiasCM, #midiasUZL {
+  #midiasMMS,
+  #midiasSGA,
+  #midiasCM,
+  #midiasUZL {
     width: 90vw;
-
   }
 
-  .fb, .ig {
+  .fb,
+  .ig {
     display: flex;
     width: 90vw;
     box-sizing: border-box;
   }
-
 }
