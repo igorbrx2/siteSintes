@@ -1,6 +1,6 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .pesquisa {
-    display:none;
+    display: none;
   }
 
   .noticiasLista {
@@ -82,6 +82,7 @@
 
   .colunaArtigos ul li a {
     width: 40vw;
+
   }
 
   .colunaArtigos ul {
@@ -329,7 +330,7 @@
   }
 
   .colunaArtigos ul li a {
-    width: 30vw;
+    width: 20vw;
   }
 
   .colunaArtigos ul {
@@ -345,7 +346,7 @@
     display: block;
     width: 40vw;
     max-width: auto;
-    height: 200px;
+    height: 10vh;
     max-height: 15vh;
     -o-object-fit: cover;
     object-fit: cover;
