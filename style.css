@@ -830,7 +830,7 @@ nav {
   height: 100%;
   display: block;
   object-fit: cover;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   filter: brightness(0.4);
 }
 
