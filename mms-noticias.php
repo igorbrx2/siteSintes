@@ -4,7 +4,7 @@
 // Busca o post mais recente
 $query = new WP_Query(array(
     'posts_per_page' => 1,
-    'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos')),
+    'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos'), get_cat_ID('fotos')),
 ));
 
 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); 
@@ -45,7 +45,7 @@ endif;
     $query = new WP_Query(array(
         'posts_per_page' => 6,
         'offset' => 1,
-        'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos')),
+        'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos'), get_cat_ID('fotos')),
     ));
 
     if ($query->have_posts()) : 
