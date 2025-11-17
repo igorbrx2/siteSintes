@@ -11,7 +11,7 @@
 <?php 
 $query = new WP_Query(array(
     'posts_per_page' => 1,
-    'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos')),
+    'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos'), get_cat_ID('fotos')),
 ));
 
 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); 
@@ -67,7 +67,7 @@ endif;
         $query = new WP_Query(array(
             'posts_per_page' => 6, // Limita a 6 posts por página
             'paged' => $paged, // Define a página atual
-            'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos')), // Exclui categorias específicas
+            'category__not_in' => array(get_cat_ID('Artigo'), get_cat_ID('documentos'), get_cat_ID('fotos')), // Exclui categorias específicas
         ));
 
         if ($query->have_posts()) : 
